@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный дневник - Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-primary text-white py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h4 mb-0">Кирпичев Кирилл</h1>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">ЭФБО-14-24</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="project.html">
+                                <i class="bi bi-folder me-1"></i>Проекты
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="diary.html">
+                                <i class="bi bi-journal me-1"></i>Дневник
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container my-5">
+            <!-- Page Header -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h1 class="h2 text-primary">Мой учебный прогресс</h1>
+                    <p class="text-muted">Отслеживание образовательного прогресса</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Progress Records -->
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-light">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-journal-text text-primary me-2"></i>
+                                История обучения
+                            </h3>
+                        </div>
+                        <div class="card-body" id="progressRecords">
+                            <!-- Записи будут добавляться сюда через JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Courses -->
+                <div class="col-lg-4">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-light">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-book text-primary me-2"></i>
+                                Текущие курсы
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <!-- Course 1 -->
+                            <div class="course-card mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h6 class="mb-0">Веб-разработка</h6>
+                                    <span class="text-primary fw-bold">90%</span>
+                                </div>
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar bg-primary" style="width: 90%"></div>
+                                </div>
+                                <p class="small text-muted mb-0">
+                                    HTML, CSS, JavaScript, Bootstrap
+                                </p>
+                            </div>
+
+                            <!-- Course 2 -->
+                            <div class="course-card mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h6 class="mb-0">JavaScript</h6>
+                                    <span class="text-success fw-bold">70%</span>
+                                </div>
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar bg-success" style="width: 70%"></div>
+                                </div>
+                                <p class="small text-muted mb-0">
+                                    Основы, DOM, Events, API
+                                </p>
+                            </div>
+
+                            <!-- Course 3 -->
+                            <div class="course-card mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h6 class="mb-0">React</h6>
+                                    <span class="text-info fw-bold">50%</span>
+                                </div>
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 50%"></div>
+                                </div>
+                                <p class="small text-muted mb-0">
+                                    Components, State, Props, Hooks
+                                </p>
+                            </div>
+
+                            <!-- Course 4 -->
+                            <div class="course-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h6 class="mb-0">Базы данных</h6>
+                                    <span class="text-warning fw-bold">30%</span>
+                                </div>
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" style="width: 30%"></div>
+                                </div>
+                                <p class="small text-muted mb-0">
+                                    SQL, MongoDB, модели данных
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Record Button -->
+                    <div class="card shadow-sm mt-4">
+                        <div class="card-body text-center">
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#addRecordModal">
+                                <i class="bi bi-plus-circle me-2"></i>
+                                Добавить запись
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 Портфолио студента. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Add Record Modal -->
+    <div class="modal fade" id="addRecordModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Добавить учебную запись</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addRecordForm">
+                        <div class="mb-3">
+                            <label for="recordDate" class="form-label">Дата</label>
+                            <input type="date" class="form-control" id="recordDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="recordTitle" class="form-label">Название темы</label>
+                            <input type="text" class="form-control" id="recordTitle" placeholder="Введите тему занятия" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="recordDescription" class="form-label">Описание</label>
+                            <textarea class="form-control" id="recordDescription" rows="3" placeholder="Опишите что вы изучили" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Статус</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="status" id="statusCompleted" value="completed">
+                                    <label class="form-check-label" for="statusCompleted">Завершено</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="status" id="statusInProgress" value="in-progress" checked>
+                                    <label class="form-check-label" for="statusInProgress">В процессе</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Технологии</label>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <div class="form-check">
+                                    <input class="form-check-input tech-checkbox" type="checkbox" value="HTML/CSS" id="techHTML">
+                                    <label class="form-check-label" for="techHTML">HTML/CSS</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input tech-checkbox" type="checkbox" value="JavaScript" id="techJS">
+                                    <label class="form-check-label" for="techJS">JavaScript</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input tech-checkbox" type="checkbox" value="Bootstrap" id="techBootstrap">
+                                    <label class="form-check-label" for="techBootstrap">Bootstrap</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input tech-checkbox" type="checkbox" value="React" id="techReact">
+                                    <label class="form-check-label" for="techReact">React</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary" id="saveRecordBtn">Добавить запись</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Инициализация начальных записей
+        const initialRecords = [
+            {
+                date: "15 дек",
+                title: "Верстка макета сайта",
+                description: "Создание адаптивного макета сайта с использованием HTML5 и CSS3. Работа с Flexbox и Grid layout.",
+                status: "completed",
+                technologies: ["HTML5", "CSS3", "Flexbox", "Grid"]
+            },
+            {
+                date: "10 дек",
+                title: "JavaScript основы",
+                description: "Изучение основ JavaScript: переменные, функции, условия, циклы. Создание интерактивных элементов на странице.",
+                status: "completed", 
+                technologies: ["JavaScript", "DOM", "Events"]
+            },
+            {
+                date: "05 дек", 
+                title: "Работа с формами",
+                description: "Валидация форм, обработка данных, работа с localStorage. Создание сложных форм с динамической валидацией.",
+                status: "in-progress",
+                technologies: ["Forms", "Validation", "LocalStorage"]
+            },
+            {
+                date: "01 дек",
+                title: "Адаптивный дизайн", 
+                description: "Media queries, mobile-first подход, оптимизация для разных устройств. Работа с фреймворком Bootstrap.",
+                status: "in-progress",
+                technologies: ["Responsive", "Bootstrap", "Media Queries"]
+            }
+        ];
+
+        // Функция для отображения записи
+        function renderRecord(record) {
+            const statusClass = record.status === 'completed' ? 'completed' : 'in-progress';
+            const statusText = record.status === 'completed' ? 'Завершено' : 'В процессе';
+            const statusBadge = record.status === 'completed' ? 'bg-success' : 'bg-warning text-dark';
+            const statusIcon = record.status === 'completed' ? 'bi-check-circle' : 'bi-arrow-repeat';
+
+            const technologiesHTML = record.technologies.map(tech => 
+                `<span class="badge bg-primary">${tech}</span>`
+            ).join('');
+
+            return `
+                <div class="progress-record ${statusClass} mb-4">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="mb-0">${record.date} - ${record.title}</h5>
+                        <span class="badge ${statusBadge}">
+                            <i class="bi ${statusIcon} me-1"></i>${statusText}
+                        </span>
+                    </div>
+                    <p class="text-muted mb-2">${record.description}</p>
+                    <div class="d-flex gap-2 flex-wrap">
+                        ${technologiesHTML}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Функция для загрузки записей
+        function loadRecords() {
+            const recordsContainer = document.getElementById('progressRecords');
+            const savedRecords = JSON.parse(localStorage.getItem('studyRecords')) || initialRecords;
+            
+            recordsContainer.innerHTML = savedRecords.map(record => renderRecord(record)).join('');
+        }
+
+        // Функция для сохранения новой записи
+        function saveNewRecord(event) {
+            event.preventDefault();
+            
+            const dateInput = document.getElementById('recordDate');
+            const titleInput = document.getElementById('recordTitle');
+            const descriptionInput = document.getElementById('recordDescription');
+            const statusRadio = document.querySelector('input[name="status"]:checked');
+            const techCheckboxes = document.querySelectorAll('.tech-checkbox:checked');
+            
+            // Валидация
+            if (!dateInput.value || !titleInput.value || !descriptionInput.value) {
+                alert('Пожалуйста, заполните все обязательные поля');
+                return;
+            }
+
+            // Форматирование даты
+            const date = new Date(dateInput.value);
+            const formattedDate = date.toLocaleDateString('ru-RU', { 
+                day: 'numeric', 
+                month: 'short' 
+            });
+
+            // Сбор данных
+            const newRecord = {
+                date: formattedDate,
+                title: titleInput.value,
+                description: descriptionInput.value,
+                status: statusRadio.value,
+                technologies: Array.from(techCheckboxes).map(cb => cb.value)
+            };
+
+            // Сохранение в localStorage
+            const savedRecords = JSON.parse(localStorage.getItem('studyRecords')) || initialRecords;
+            savedRecords.unshift(newRecord); // Добавляем в начало
+            localStorage.setItem('studyRecords', JSON.stringify(savedRecords));
+
+            // Обновление отображения
+            loadRecords();
+
+            // Очистка формы и закрытие модального окна
+            document.getElementById('addRecordForm').reset();
+            const modal = bootstrap.Modal.getInstance(document.getElementById('addRecordModal'));
+            modal.hide();
+
+            // Показ уведомления
+            alert('Запись успешно добавлена!');
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            loadRecords();
+            
+            // Обработчик для кнопки сохранения
+            document.getElementById('saveRecordBtn').addEventListener('click', saveNewRecord);
+            
+            // Установка сегодняшней даты по умолчанию
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('recordDate').value = today;
+        });
+    </script>
+</body>
+</html>

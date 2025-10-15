@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты - Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-primary text-white py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div class="logo">Кирпичев Кирилл</div>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">ЭФБО-14-24</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="projects.html">
+                                <i class="bi bi-folder me-1"></i>Проекты
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="diary.html">
+                                <i class="bi bi-journal me-1"></i>Дневник
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container my-5">
+            <!-- Page Header -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h1 class="h2 text-primary">Мои проекты</h1>
+                    <p class="text-muted">Полная коллекция учебных и личных работ</p>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-primary active filter-btn" data-filter="all">Все</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="html">HTML/CSS</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="js">JavaScript</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="bootstrap">Bootstrap</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="row g-4" id="projectsGrid">
+                <!-- Project 1 - Личный сайт -->
+                <div class="col-md-6 col-lg-4" data-category="html bootstrap">
+                    <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                        <img src="../img/ramos.jpg" class="card-img-top" alt="Личный сайт" style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Личный сайт</h5>
+                            <p class="card-text text-muted">Сайт-портфолио с адаптивным дизайном</p>
+                            <div class="mb-2">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-primary">CSS</span>
+                                <span class="badge bg-info">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Todo приложение -->
+                <div class="col-md-6 col-lg-4" data-category="js">
+                    <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                        <img src="../img/match.jpg" class="card-img-top" alt="Todo приложение" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Todo-приложение</h5>
+                            <p class="card-text text-muted">Приложение для управления задачами</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">JavaScript</span>
+                                <span class="badge bg-success">LocalStorage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Игра "Память" -->
+                <div class="col-md-6 col-lg-4" data-category="js">
+                    <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                        <img src="../img/mozgi.jpg" class="card-img-top" alt="Игра Память" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Игра "Память"</h5>
+                            <p class="card-text text-muted">Карточная игра на чистом JavaScript</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">JavaScript</span>
+                                <span class="badge bg-warning">Game</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 - Портфолио -->
+                <div class="col-md-6 col-lg-4" data-category="html bootstrap">
+                    <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#projectModal4">
+                        <img src="../img/portfolio.jpg" class="card-img-top" alt="Портфолио" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Портфолио</h5>
+                            <p class="card-text text-muted">Адаптивное портфолио на Bootstrap</p>
+                            <div class="mb-2">
+                                <span class="badge bg-info">Bootstrap</span>
+                                <span class="badge bg-primary">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 - Калькулятор -->
+                <div class="col-md-6 col-lg-4" data-category="js">
+                    <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#projectModal5">
+                        <img src="../img/calc.jpg" class="card-img-top" alt="Калькулятор" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Калькулятор</h5>
+                            <p class="card-text text-muted">Интерактивный калькулятор на JavaScript</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">JavaScript</span>
+                                <span class="badge bg-primary">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 - Галерея изображений -->
+                <div class="col-md-6 col-lg-4" data-category="js html">
+                    <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#projectModal6">
+                        <img src="../img/galer.jpg" class="card-img-top" alt="Галерея" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Галерея изображений</h5>
+                            <p class="card-text text-muted">Интерактивная галерея с фильтрацией</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">JavaScript</span>
+                                <span class="badge bg-primary">HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="row mt-5">
+                <div class="col">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Предыдущая</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Следующая</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 Портфолио студента. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Project Modals -->
+    
+    <!-- Modal 1 - Личный сайт -->
+    <div class="modal fade" id="projectModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Личный сайт-портфолио</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/project1.jpg" class="img-fluid rounded mb-3" alt="Личный сайт">
+                    <h6>Описание проекта:</h6>
+                    <p>Полнофункциональный личный сайт-портфолио с адаптивным дизайном. Включает разделы "Обо мне", "Навыки", "Проекты" и "Контакты".</p>
+                    
+                    <h6>Технологии:</h6>
+                    <div class="mb-3">
+                        <span class="badge bg-primary">HTML5</span>
+                        <span class="badge bg-primary">CSS3</span>
+                        <span class="badge bg-info">Bootstrap 5</span>
+                        <span class="badge bg-success">JavaScript</span>
+                    </div>
+                    
+                    <h6>Особенности:</h6>
+                    <ul>
+                        <li>Адаптивный дизайн для всех устройств</li>
+                        <li>Интерактивная навигация</li>
+                        <li>Progress bars для навыков</li>
+                        <li>Карточки проектов с модальными окнами</li>
+                    </ul>
+                    
+                    <h6>Ссылки:</h6>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="#" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye me-1"></i>Живая версия
+                        </a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-github me-1"></i>Исходный код
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 - Todo приложение -->
+    <div class="modal fade" id="projectModal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Todo-приложение</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/project2.jpg" class="img-fluid rounded mb-3" alt="Todo приложение">
+                    <h6>Описание проекта:</h6>
+                    <p>Интерактивное приложение для управления задачами с возможностью добавления, удаления, отметки выполнения и фильтрации задач.</p>
+                    
+                    <h6>Технологии:</h6>
+                    <div class="mb-3">
+                        <span class="badge bg-success">JavaScript</span>
+                        <span class="badge bg-success">LocalStorage</span>
+                        <span class="badge bg-primary">CSS3</span>
+                        <span class="badge bg-primary">HTML5</span>
+                    </div>
+                    
+                    <h6>Функциональность:</h6>
+                    <ul>
+                        <li>Добавление/удаление задач</li>
+                        <li>Отметка выполнения</li>
+                        <li>Фильтрация по статусу (все, активные, завершенные)</li>
+                        <li>Сохранение данных в LocalStorage</li>
+                        <li>Счетчик активных задач</li>
+                    </ul>
+                    
+                    <h6>Ссылки:</h6>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="#" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye me-1"></i>Живая версия
+                        </a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-github me-1"></i>Исходный код
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 - Игра "Память" -->
+    <div class="modal fade" id="projectModal3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Игра "Память"</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/project3.jpg" class="img-fluid rounded mb-3" alt="Игра Память">
+                    <h6>Описание проекта:</h6>
+                    <p>Классическая карточная игра на развитие памяти. Игрок должен находить парные карточки, запоминая их расположение.</p>
+                    
+                    <h6>Технологии:</h6>
+                    <div class="mb-3">
+                        <span class="badge bg-success">JavaScript</span>
+                        <span class="badge bg-primary">CSS3</span>
+                        <span class="badge bg-primary">HTML5</span>
+                    </div>
+                    
+                    <h6>Функциональность:</h6>
+                    <ul>
+                        <li>Таймер игры</li>
+                        <li>Счетчик ходов</li>
+                        <li>Разные уровни сложности</li>
+                        <li>Анимация переворота карточек</li>
+                        <li>Таблица рекордов</li>
+                    </ul>
+                    
+                    <h6>Ссылки:</h6>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="#" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye me-1"></i>Живая версия
+                        </a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-github me-1"></i>Исходный код
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Добавьте аналогичные модальные окна для остальных проектов -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectItems = document.querySelectorAll('#projectsGrid > [data-category]');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    projectItems.forEach(item => {
+                        if (filter === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            const categories = item.getAttribute('data-category').split(' ');
+                            if (categories.includes(filter)) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
